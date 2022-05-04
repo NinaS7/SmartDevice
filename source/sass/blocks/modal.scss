@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -65px;
   left: 0;
   z-index: 1000;
 
@@ -11,7 +11,7 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  background-color: rgba($color-default-black, 0.8);
+  background-color: rgba($color-black-pearl-2, 0.7);
   transform: scale(1.2);
   visibility: hidden;
   opacity: 0;
@@ -39,10 +39,6 @@
     width: 100%;
     min-height: 100%;
     padding: 60px 40px;
-
-    @include vp-767 {
-      padding: 60px 16px;
-    }
   }
 
   &__overlay {
@@ -59,28 +55,24 @@
   &__content {
     position: relative;
 
-    width: 600px;
+    width: 500px;
     padding: 40px;
 
-    background-color: $color-default-white;
-
-    @include vp-767 {
-      width: 100%;
-      padding: 20px;
-    }
+    background-color: $color-deep-sky-blue;
+    border-radius: 3px;
   }
 
   &__close-btn {
     position: absolute;
-    top: 22px;
-    right: 22px;
+    top: 25px;
+    right: 25px;
     z-index: 1;
 
     width: 40px;
     height: 40px;
     padding: 0;
 
-    background: $color-transparent;
+    background: $color-deep-sky-blue;
     border: none;
     cursor: pointer;
   }
@@ -94,10 +86,6 @@
   &--fit-content {
     .modal__content {
       width: auto;
-
-      @include vp-767 {
-        width: 100%;
-      }
     }
   }
 
@@ -116,4 +104,134 @@
 
     pointer-events: auto;
   }
+}
+
+.modal h3 {
+  font-size: 30px;
+  line-height: 42px;
+  color: $color-default-white;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.modal p {
+  color: $color-default-white;
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $ff-mono;
+  margin-bottom: 40px;
+}
+
+.modal input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+
+  &:invalid {
+    color: red;
+    box-shadow: none;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border: none;
+  }
+}
+
+.modal textarea {
+  background: rgba(4, 20, 39, 0.15);
+  border-radius: 3px;
+  border: none;
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-default-white;
+  width: 100%;
+  padding-top: 25px;
+  padding-left: 15px;
+  min-height: 155px;
+  margin-bottom: 25px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border: none;
+  }
+}
+
+.modal__button {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background-color: $color-black-pearl-2;
+  border-radius: 3px;
+  color: $color-default-white;
+  padding: 15px 25px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal__checkbox {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  opacity: 0.8;
+  font-family: $ff-mono;
+}
+
+.modal__checkbox label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  padding-left: 26px;
+}
+
+.modal__checkbox-input:hover + label,
+.modal__checkbox-input:focus + label {
+  opacity: 0.7;
+}
+
+.modal__checkbox-input + label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  border: 1px solid $color-default-white;
+  box-sizing: border-box;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.modal__checkbox-input:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  left: 0;
+  background-image: url("../img/svg/checkbox-on.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.modal__checkbox-input:checked:disabled::before {
+  cursor: default;
 }

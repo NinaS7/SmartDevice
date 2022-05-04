@@ -1,0 +1,49 @@
+.header {
+  position: absolute;
+  z-index: 1;
+  background:  linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  width: 100%;
+  min-height: 120px;
+}
+
+.header__wrapper {
+  padding-right: 60px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  gap: 160px;
+}
+
+.header__logo {
+  margin-top: 30px;
+}
+
+.header__links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.header__link {
+  font-family: $ff-mono;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-tory-blue;
+}
+
+.btn {
+  display: block;
+  border: 1px solid #f2f5f7;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-tory-blue;
+  padding: 10px 15px;
+  width: 160px;
+  margin-top: 35px;
+}
