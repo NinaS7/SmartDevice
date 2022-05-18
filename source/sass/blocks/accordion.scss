@@ -1,0 +1,47 @@
+.accordion-item__content {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.accordion-item__toggle {
+  display: none;
+
+  @include vp-767 {
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+}
+
+.accordion-item .accordion-item__icon--close {
+  display: block;
+}
+
+.accordion-item .accordion-item__icon--open {
+  display: none;
+}
+
+.accordion-item__current .accordion-item__content {
+  display: block;
+}
+
+.accordion-item__current .accordion-item__icon--open {
+  display: block;
+}
+
+.accordion-item__current .accordion-item__icon--close {
+  display: none;
+}
+
+.accordion-item--nojs .accordion-item__toggle {
+  display: none;
+}
+
+.accordion-item--nojs .accordion-item__content {
+  display: block;
+}

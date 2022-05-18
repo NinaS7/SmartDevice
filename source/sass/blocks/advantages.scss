@@ -1,40 +1,99 @@
 .advantages ul {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px 30px;
+  gap: 30px;
   list-style: none;
   margin: 0;
   margin-bottom: 120px;
   padding: 0;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    margin-bottom: 50px;
+  }
 }
 
 .advantages li {
-  width: 595px;
+  max-width: 595px;
+  width: 100%;
   height: 300px;
   border: 1px solid #ebebeb;
   border-left: 5px solid $color-deep-sky-blue;
   box-sizing: border-box;
-  padding: 95px 45px 0;
+  padding: 40px 41px 0;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: $color-deep-sky-blue;
 
-    .h4 {
+    h4 {
       color: $color-tory-blue;
     }
 
-    .p {
+    p {
       color: $color-tory-blue;
     }
+
+    .advantages__image path {
+      fill: rgba(242, 245, 246, 1);
+    }
+  }
+
+  @include vp-1023 {
+    min-width: 320px;
+    height: 360px;
+    max-width: none;
+  }
+
+  @include vp-767 {
+    min-width: 100%;
+    height: 340px;
+    padding: 30px 25px 35px;
+  }
+}
+
+.advantages__image {
+  margin-bottom: 15px;
+
+  @include vp-1023 {
+    margin-bottom: 9px;
+  }
+
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
+  }
+}
+
+.advantages__icon {
+  @include vp-767 {
+    width: 30px;
+    height: 30px;
   }
 }
 
 .advantages h4 {
   margin: 0;
-  margin-bottom: 15px;
-  font-size: 24px;
+  margin-bottom: 12px;
+  font-size: 20px;
   line-height: 34px;
   color: $color-deep-sky-blue;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+  }
+
+  @include vp-767 {
+    font-size: 19px;
+    line-height: 28px;
+    letter-spacing: -0.08em;
+    margin-bottom: 10px;
+  }
 }
 
 .advantages p {
@@ -44,4 +103,25 @@
   font-size: 16px;
   line-height: 22px;
   color: #041827;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.advantages__detective .advantages__image {
+  @include vp-767 {
+    margin-bottom: 18px;
+  }
+}
+
+.advantages__detective {
+  @include vp-767 {
+    height: 325px;
+
+    h4 {
+      margin-bottom: 13px;
+    }
+  }
 }

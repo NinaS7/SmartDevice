@@ -1,23 +1,42 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {getAccordion} from './accordion';
+import {onClick} from './company';
+import {getMask} from './mask';
 
-// ---------------------------------
+const anchors = document.querySelectorAll('.scroll-to');
 
 window.addEventListener('DOMContentLoaded', () => {
 
-  // Utils
-  // ---------------------------------
-
   iosVhFix();
 
-  // Modules
-  // ---------------------------------
+});
 
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    initModals();
-  });
+const getscroll = () => {
+  const scrollY = document.body.style.top;
+  document.body.style.position = '';
+  document.body.style.top = '';
+  window.scrollTo(0, parseFloat(scrollY || '0') * -1);
+};
+
+window.addEventListener('load', () => {
+  initModals();
+
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      getscroll();
+      const blockID = anchor.getAttribute('href');
+      document.querySelector(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  }
+
+  onClick();
+  getMask();
+  getAccordion();
 });
 
 // ---------------------------------

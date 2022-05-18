@@ -1,19 +1,53 @@
 .services {
   background-color: $color-black-pearl;
-  padding-top: 70px;
+  padding-top: 66px;
   padding-bottom: 140px;
+
+  @include vp-1023 {
+    padding-top: 56px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-767 {
+    padding-top: 50px;
+    padding-bottom: 86px;
+  }
 }
 
 .services h3 {
   font-size: 36px;
   line-height: 51px;
+  font-weight: 400;
   color: $color-default-white;
   margin: 0;
-  margin-bottom: 50px;
+  margin-bottom: 54px;
+
+  @include vp-1023 {
+    font-size: 36px;
+    letter-spacing: -0.09em;
+    margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    font-size: 26px;
+    line-height: 39px;
+    letter-spacing: 0;
+    margin-bottom: 40px;
+  }
 }
 
 .services__title-mobile {
   display: none;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.services__title-desktop {
+  @include vp-767 {
+    display: none;
+  }
 }
 
 .services ul {
@@ -23,15 +57,50 @@
   grid-template-columns: 1fr 1fr 1fr;
   gap: 85px;
   list-style: none;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
 
 .services li {
   position: relative;
-  width: 350px;
+  width: 100%;
   height: 650px;
   margin: 0 auto;
-  padding: 50px 40px 0;
+  padding: 47px 40px;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    h4 {
+      color: $color-deep-sky-blue;
+    }
+  }
+
+  @include vp-1023 {
+    height: 250px;
+    padding: 37px 45px;
+  }
+
+  @include vp-767 {
+    padding: 30px;
+  }
+}
+
+.services a {
+  max-width: 350px;
+  width: 100%;
+
+  @include vp-1023 {
+    min-width: 670px;
+    max-width: none;
+  }
+
+  @include vp-767 {
+    min-width: 270px;
+  }
 }
 
 .services img {
@@ -44,19 +113,47 @@
 }
 
 .services h4 {
-  font-size: 20px;
+  font-size: 19px;
   line-height: 30px;
+  font-weight: 400;
   color: $color-default-white;
   margin: 0;
   position: absolute;
+  width: 172px;
+
+  @include vp-1023 {
+    width: 148px;
+  }
+
+  @include vp-767 {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }
 
 .services__link {
   position: absolute;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0;
   background-color: $color-deep-sky-blue;
-  width: 60px;
-  height: 60px;
+  background-image: url("../img/svg/tick.svg");
+  background-size: 7px 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 62px;
+  height: 62px;
   right: 0;
   bottom: 0;
+
+  @include vp-1023 {
+    width: 58px;
+    height: 60px;
+    background-position: 30px;
+  }
+
+  @include vp-767 {
+    width: 40px;
+    height: 40px;
+    background-size: 7px 7px;
+    background-position: 20px;
+  }
 }

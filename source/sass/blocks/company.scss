@@ -1,3 +1,146 @@
 .company {
   margin-bottom: 100px;
+
+  @include vp-1023 {
+    margin-bottom: 80px;
+  }
+}
+
+.company__wrapper {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 100px;
+
+  @include vp-1023 {
+    gap: 25px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.company__image {
+  display: block;
+  width: 145px;
+  height: 320px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.company h3 {
+  font-size: 36px;
+  line-height: 51px;
+  letter-spacing: -0.1em;
+  color: $color-black-pearl;
+  margin: 0;
+
+  @include vp-1023 {
+    font-size: 33px;
+    letter-spacing: -0.05em;
+    margin-top: -4px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.company p {
+  font-family: $ff-mono;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+  margin-top: 16px;
+
+  @include vp-1023 {
+    margin-top: 14px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.company__mobile p {
+  margin-top: 0;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+}
+
+.company__button {
+  display: block;
+  width: 180px;
+  border: 1px solid $color-deep-sky-blue;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: $color-deep-sky-blue;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+  padding: 13px;
+  margin-top: 40px;
+  cursor: pointer;
+
+  @include vp-1023 {
+    margin-top: 19px;
+  }
+
+  @include vp-767 {
+    width: 160px;
+    padding: 8px 15px 12px;
+  }
+}
+
+.company__info--closed .company__button--collapse {
+  display: none;
+}
+
+.company__info--closed .company__button--more {
+  display: block;
+}
+
+.company__info--closed .company__more {
+  display: none;
+}
+
+.company__info--closed .company__mobile {
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.company__info--opened .company__button--collapse {
+  display: block;
+}
+
+.company__info--opened .company__button--more {
+  display: none;
+}
+
+.company__info--opened .company__more {
+  display: block;
+}
+
+.company__info--opened .company__mobile {
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.company__info--nojs .company__button {
+  display: none;
+}
+
+.company__info--nojs .company__mobile {
+  display: block;
 }

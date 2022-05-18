@@ -4,30 +4,65 @@
   background-position: 0 77%;
   background-size: cover;
   min-height: 840px;
+
+  @include vp-1023 {
+    min-height: 580px;
+    background-image: none;
+  }
+
+  @include vp-767 {
+    min-height: 750px;
+  }
 }
 
 .feedback__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 45px;
   padding-top: 170px;
   padding-right: 10px;
   margin: 0 auto;
+
+  @include vp-1023 {
+    padding: 50px 0 0;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
 }
 
 .feedback__wrapper img {
-  width: 510px;
-  height: 285px;
-  margin-top: 80px;
+  max-width: 510px;
+  width: 100%;
+  //height: 285px;
+  margin-top: 75px;
   background-color: transparent;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .feedback__info h3 {
   margin: 0;
   margin-bottom: 15px;
-  font-size: 36px;
-  line-height: 51px;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 400;
   color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 20px;
+  }
 }
 
 .feedback__info p {
@@ -37,21 +72,42 @@
   color: $color-default-white;
   margin: 0;
   margin-bottom: 35px;
+
+  @include vp-1023 {
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 40px;
+  }
 }
 
 .feedback form {
-  width: 580px;
+  max-width: 580px;
   min-height: 305px;
+
+  @include vp-1023 {
+    width: 100%;
+    max-width: 670px;
+  }
 }
 
-.feedback__input {
-  display: flex;
-  justify-content: space-between;
+.feedback__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .feedback input {
-  width: 275px;
-  padding: 15px;
+  max-width: 275px;
+  width: 100%;
+  padding: 13px 15px 15px 16px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
   border: none;
@@ -61,15 +117,27 @@
   color: $color-default-white;
 
   &:invalid {
-    color: red;
+    color: $color-torch-red;
     box-shadow: none;
   }
 
   &:hover,
   &:focus {
     background-color: $color-default-white;
-    color: $color-default-black;
     border: none;
+    color: $color-default-black;
+
+    &::placeholder {
+      color: $color-default-black;
+    }
+  }
+
+  @include vp-1023 {
+    max-width: 320px;
+  }
+
+  @include vp-767 {
+    max-width: none;
   }
 }
 
@@ -83,31 +151,81 @@
   line-height: 22px;
   color: $color-default-white;
   width: 100%;
-  padding-top: 25px;
-  padding-left: 15px;
+  padding-top: 23px;
+  padding-left: 17px;
   min-height: 155px;
-  margin-bottom: 35px;
+  margin-bottom: 29px;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border: none;
+
+    &::placeholder {
+      color: $color-default-black;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 31px;
+    padding-left: 15px;
+  }
+
+  @include vp-767 {
+    min-height: 180px;
+    margin-bottom: 30px;
+  }
+}
+
+.feedback input::placeholder,
+.feedback textarea::placeholder {
+  color: $color-default-white;
 }
 
 .feedback__choice {
   display: flex;
-  justify-content: space-between;
+
+  @include vp-1023 {
+    justify-content: space-between;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+  }
 }
 
 .feedback button {
   display: block;
-  width: 265px;
+  width: 267px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 19px;
   text-align: center;
-  letter-spacing: 0.05em;
   text-transform: uppercase;
   background-color: $color-black-pearl;
   border-radius: 3px;
+  border: none;
   color: $color-default-white;
-  padding: 15px 25px;
+  padding: 16px 25px 11px;
   margin: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-default-black;
+    background-color: $color-default-white;
+  }
+
+  @include vp-1023 {
+    padding-top: 17px;
+    padding-bottom: 10px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    margin-bottom: 25px;
+  }
 }
 
 .feedback__checkbox {
@@ -116,6 +234,11 @@
   color: $color-default-white;
   opacity: 0.8;
   font-family: $ff-mono;
+  padding-left: 77px;
+
+  @include vp-1023 {
+    padding-right: 60px;
+  }
 }
 
 .feedback__checkbox label {
@@ -123,8 +246,11 @@
   display: block;
   cursor: pointer;
   width: 234px;
-  padding-top: 20px;
-  padding-left: 26px;
+  padding-top: 14px;
+
+  @include vp-1023 {
+    padding-top: 10px;
+  }
 }
 
 .feedback__checkbox-input:hover + label,
@@ -151,11 +277,16 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  top: 25px;
-  left: 0;
+  top: 20px;
+  left: -27px;
   background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
   cursor: pointer;
+
+  @include vp-1023 {
+    top: 17px;
+    left: -25px;
+  }
 }
 
 .feedback__checkbox-input:checked:disabled::before {

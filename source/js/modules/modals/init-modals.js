@@ -35,7 +35,7 @@ const initModals = () => {
   });
   modals = new Modals(settings);
   // Используйте в разработке экспортируемую переменную modals, window сделан для бэкэнда
-  window.modals = modals;
+  // window.modals = modals;
 };
 
 export {modals, initModals};
