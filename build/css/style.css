@@ -996,7 +996,7 @@ button,
 
 .services__link {
   position: absolute;
-  border-radius: 3px 0px 0px 0px;
+  border-radius: 3px 0 0;
   background-color: #00b2ff;
   background-image: url("../img/svg/tick.svg");
   background-size: 7px 10px;
@@ -1079,7 +1079,7 @@ button,
 }
 
 .feedback input:invalid {
-  color: red;
+  color: #ff1553;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1616,7 +1616,7 @@ button,
 }
 
 .modal input:invalid {
-  color: red;
+  color: #ff1553;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1985,7 +1985,7 @@ button,
 
   .services h3 {
     font-size: 36px;
-    letter-spacing: -0.094em;
+    letter-spacing: -0.09em;
     margin-bottom: 37px;
   }
 

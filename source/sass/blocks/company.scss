@@ -101,11 +101,11 @@
   }
 }
 
-.company__info--closed .company__button--collapse {
+.company__info--closed .company__button-collapse {
   display: none;
 }
 
-.company__info--closed .company__button--more {
+.company__info--closed .company__button-more {
   display: block;
 }
 
@@ -119,11 +119,11 @@
   }
 }
 
-.company__info--opened .company__button--collapse {
+.company__info--opened .company__button-collapse {
   display: block;
 }
 
-.company__info--opened .company__button--more {
+.company__info--opened .company__button-more {
   display: none;
 }
 
