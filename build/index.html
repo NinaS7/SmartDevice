@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Smart Device</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="fonts/robotocondensed.woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" crossorigin="anonymous">
@@ -37,13 +37,13 @@
               </picture>
             </a>
             <div class="header__links">
-              <a class="header__link header__link--email" href="malti:info@sd.ru" aria-label="Напишите нам">
+              <a class="header__link" href="malti:info@sd.ru" aria-label="Напишите нам">
                 <svg class="header__image" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#icon-email"></use>
                 </svg>
                 <span>info@sd.ru</span>
               </a>
-              <a class="header__link header__link--phone" href="tel+74950005252" aria-label="Позвоните нам">
+              <a class="header__link" href="tel+74950005252" aria-label="Позвоните нам">
                 <svg class="header__image" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
@@ -63,8 +63,8 @@
             <h2>Печатные платы</h2>
             <p>производство и монтаж, поставка комплектующих, <br>блоков и модулей</p>
             <a class="scroll-to" href="#feedback" aria-label="Получить консультацию">
-              <span class="promo__button-desktop">Получить бесплатную консультацию</span>
-              <span class="promo__button-mobile">Бесплатная консультация</span>
+              <span>Получить бесплатную консультацию</span>
+              <span>Бесплатная консультация</span>
             </a>
           </div>
         </section>
@@ -100,7 +100,7 @@
                 <h4>Полная конфиденциальность</h4>
                 <p>По&nbsp;желанию клиента мы обеспечиваем полную конфеденциальность.</p>
               </li>
-              <li>
+              <li class="advantages__tag">
                 <div class="advantages__image">
                   <svg class="advantages__icon" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#icon-tag"></use>
@@ -123,7 +123,7 @@
               </picture>
               <div class="company__info company__info--closed company__info--nojs">
                 <h3>О компании</h3>
-                <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
+                <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и пилотные образцы до&nbsp;10&nbsp;дней.</p>
                 <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.</p>
                 <div class="company__mobile">
                   <p>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</p>
@@ -133,8 +133,8 @@
                   </div>
                 </div>
                 <button class="company__button" type="button" aria-label="Узнать подробнее">
-                  <span class="company__button--more">Подробнее</span>
-                  <span class="company__button--collapse">Свернуть</span>
+                  <span>Подробнее</span>
+                  <span>Свернуть</span>
                 </button>
               </div>
             </div>
@@ -144,8 +144,8 @@
         <section class="services">
           <div class="container">
             <h3>
-              <span class="services__title-desktop">Smart Device предлагает следующие товары и услуги</span>
-              <span class="services__title-mobile">Товары и услуги Smart Device</span>
+              <span>Smart Device предлагает следующие товары и услуги</span>
+              <span>Товары и услуги<br>Smart Device</span>
             </h3>
             <ul>
               <li>
@@ -162,9 +162,7 @@
                     <img src="img/back-card1-desktop.jpg" width="350" height="650" srcset="img/back-card1-desktop@2x.jpg 2x" alt="Фото фрагмента платы">
                   </picture>
                   <h4>Производство <br>печатных плат</h4>
-                  <div class="services__link">
-
-                  </div>
+                  <div class="services__link"></div>
                 </a>
               </li>
               <li>
@@ -222,10 +220,12 @@
                       <input type="text" name="name" placeholder="Имя" required>
                     </label>
                     <label>
-                      <input type="tel" name="phone" id="phone" maxlength="15" placeholder="Телефон" required>
+                      <input type="tel" name="phone" id="field-tel" maxlength="16" placeholder="Телефон" required>
                     </label>
                   </div>
-                  <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                  <label>
+                    <textarea name="question" placeholder="Ваш вопрос"></textarea>
+                  </label>
                   <div class="feedback__choice">
                     <button type="submit" aria-label="Отправить вопрос">Задать вопрос</button>
                     <div class="feedback__checkbox">
@@ -348,12 +348,14 @@
             <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
             <form action="https://echo.htmlacademy.ru" method="post">
               <label>
-                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="name" data-focus-input placeholder="Имя" required>
               </label>
               <label>
-                <input type="tel" name="phone" placeholder="Телефон" maxlength="10" required>
+                <input type="tel" name="phone" placeholder="Телефон" data-tel-input maxlength="16" required>
               </label>
-              <textarea name="question" placeholder="Ваш вопрос"></textarea>
+              <label>
+                <textarea name="question" placeholder="Ваш вопрос"></textarea>
+              </label>
               <button class="modal__button" type="submit" aria-label="Отправить вопрос">Задать вопрос</button>
               <div class="modal__checkbox">
                 <input class="visually-hidden modal__checkbox-input" id="click" type="checkbox" name="info" checked required>

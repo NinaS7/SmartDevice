@@ -44,6 +44,7 @@
 
   @include vp-767 {
     width: 100%;
+    margin-top: 18px;
   }
 }
 
@@ -79,6 +80,7 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+    letter-spacing: 0;
   }
 }
 
@@ -97,5 +99,11 @@
 
   @include vp-767 {
     font-size: 14px;
+    letter-spacing: 0;
+    margin-top: 18px;
+    display: block;
+    margin-bottom: -8px;
+    width: 160px;
+    padding-left: -2px;
   }
 }

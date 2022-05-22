@@ -116,7 +116,7 @@
   }
 }
 
-.advantages__detective {
+.advantages li.advantages__detective {
   @include vp-767 {
     height: 325px;
 
@@ -124,4 +124,19 @@
       margin-bottom: 13px;
     }
   }
+}
+
+.advantages li.advantages__tag {
+  @include vp-767 {
+    height: 325px;
+
+    .advantages__image {
+      margin-bottom: 18px;
+    }
+
+    h4 {
+      margin-bottom: 14px;
+    }
+
+  };
 }

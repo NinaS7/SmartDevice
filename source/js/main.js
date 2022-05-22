@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {getAccordion} from './accordion';
 import {onClick} from './company';
-import {getMask} from './mask';
+import './mask';
 
 const anchors = document.querySelectorAll('.scroll-to');
 
@@ -12,15 +12,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 });
 
-const getscroll = () => {
-  const scrollY = document.body.style.top;
-  document.body.style.position = '';
-  document.body.style.top = '';
-  window.scrollTo(0, parseFloat(scrollY || '0') * -1);
-};
-
 window.addEventListener('load', () => {
   initModals();
+
+  const getscroll = () => {
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseFloat(scrollY || '0') * -1);
+  };
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (evt) {
@@ -35,7 +35,6 @@ window.addEventListener('load', () => {
   }
 
   onClick();
-  getMask();
   getAccordion();
 });
 

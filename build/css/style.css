@@ -770,7 +770,7 @@ button,
   opacity: 0.7;
 }
 
-.promo__button-mobile {
+.promo a:first-child {
   display: none;
 }
 
@@ -894,11 +894,11 @@ button,
   cursor: pointer;
 }
 
-.company__info--closed .company__button--collapse {
+.company__info--closed .company__button:last-child {
   display: none;
 }
 
-.company__info--closed .company__button--more {
+.company__info--closed .company__button:first-child {
   display: block;
 }
 
@@ -906,11 +906,11 @@ button,
   display: none;
 }
 
-.company__info--opened .company__button--collapse {
+.company__info--opened .company__button:last-child {
   display: block;
 }
 
-.company__info--opened .company__button--more {
+.company__info--opened .company__button:first-child {
   display: none;
 }
 
@@ -936,12 +936,13 @@ button,
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
+  letter-spacing: -0.06em;
   color: #ffffff;
   margin: 0;
   margin-bottom: 54px;
 }
 
-.services__title-mobile {
+.services h3:last-child {
   display: none;
 }
 
@@ -987,6 +988,7 @@ button,
 .services h4 {
   font-size: 19px;
   line-height: 30px;
+  letter-spacing: -0.02em;
   font-weight: 400;
   color: #ffffff;
   margin: 0;
@@ -1371,9 +1373,8 @@ button,
 
 .nav a {
   font-family: "PT Mono", "Courier New", monospaced;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 22px;
-  letter-spacing: -0.1em;
   color: #ffffff;
   opacity: 0.7;
 }
@@ -1985,7 +1986,6 @@ button,
 
   .services h3 {
     font-size: 36px;
-    letter-spacing: -0.09em;
     margin-bottom: 37px;
   }
 
@@ -2116,7 +2116,7 @@ button,
 
   .footer__contacts {
     padding: 0;
-    padding-left: 150px;
+    padding-left: 148px;
   }
 
   .social {
@@ -2211,11 +2211,11 @@ button,
     letter-spacing: -0.02em;
   }
 
-  .promo__button-mobile {
+  .promo a:first-child {
     display: block;
   }
 
-  .promo__button-desktop {
+  .promo a:last-child {
     display: none;
   }
 
@@ -2258,12 +2258,24 @@ button,
     margin-bottom: 18px;
   }
 
-  .advantages__detective {
+  .advantages li.advantages__detective {
     height: 325px;
   }
 
-  .advantages__detective h4 {
+  .advantages li.advantages__detective h4 {
     margin-bottom: 13px;
+  }
+
+  .advantages li.advantages__tag {
+    height: 325px;
+  }
+
+  .advantages li.advantages__tag .advantages__image {
+    margin-bottom: 18px;
+  }
+
+  .advantages li.advantages__tag h4 {
+    margin-bottom: 14px;
   }
 
   .company__wrapper {
@@ -2279,16 +2291,19 @@ button,
   .company h3 {
     font-size: 28px;
     line-height: 39px;
+    letter-spacing: -0.1em;
   }
 
   .company p {
     font-size: 14px;
     line-height: 19px;
+    margin-top: 15px;
   }
 
   .company__button {
     width: 160px;
-    padding: 8px 15px 12px;
+    padding: 7px 15px 9px;
+    margin-top: 15px;
   }
 
   .company__info--closed .company__mobile {
@@ -2300,27 +2315,28 @@ button,
   }
 
   .services {
-    padding-top: 50px;
+    padding-top: 49px;
     padding-bottom: 86px;
   }
 
   .services h3 {
-    font-size: 26px;
+    font-size: 25px;
     line-height: 39px;
     letter-spacing: 0;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
-  .services__title-mobile {
-    display: block;
-  }
-
-  .services__title-desktop {
+  .services h3:first-child {
     display: none;
+  }
+
+  .services h3:last-child {
+    display: block;
   }
 
   .services li {
     padding: 30px;
+    padding-top: 26px;
   }
 
   .services a {
@@ -2336,7 +2352,7 @@ button,
     width: 40px;
     height: 40px;
     background-size: 7px 7px;
-    background-position: 20px;
+    background-position: 18px;
   }
 
   .feedback {
@@ -2345,23 +2361,26 @@ button,
 
   .feedback__wrapper {
     display: block;
+    padding-top: 46px;
   }
 
   .feedback__info h3 {
-    font-size: 30px;
+    font-size: 27px;
     line-height: 42px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
+    letter-spacing: -0.02em;
   }
 
   .feedback__info p {
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 40px;
+    margin-bottom: 33px;
   }
 
   .feedback__inputs {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .feedback input {
@@ -2370,7 +2389,8 @@ button,
 
   .feedback textarea {
     min-height: 180px;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
+    padding-top: 23px;
   }
 
   .feedback__choice {
@@ -2382,7 +2402,11 @@ button,
 
   .feedback button {
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 14px;
+  }
+
+  .feedback__checkbox {
+    padding-left: 30px;
   }
 
   .footer {
@@ -2404,10 +2428,11 @@ button,
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 35px 25px 0;
+    margin-bottom: 14px;
   }
 
   .footer__logo {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     margin-left: 25px;
   }
 
@@ -2417,14 +2442,14 @@ button,
 
   .footer__nav {
     width: 100%;
-    padding: 20px 25px;
+    padding: 21px 25px;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
   .footer__contacts {
     width: 100%;
-    padding: 20px 25px;
+    padding: 23px 25px 13px;
     margin-bottom: 35px;
   }
 
@@ -2457,15 +2482,23 @@ button,
 
   .contacts ul {
     width: 100%;
+    margin-top: 18px;
   }
 
   .contacts p {
     font-size: 14px;
     line-height: 19px;
+    letter-spacing: 0;
   }
 
   .contacts a {
     font-size: 14px;
+    letter-spacing: 0;
+    margin-top: 18px;
+    display: block;
+    margin-bottom: -8px;
+    width: 160px;
+    padding-left: -2px;
   }
 }
 

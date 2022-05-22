@@ -47,6 +47,7 @@
   @include vp-767 {
     font-size: 28px;
     line-height: 39px;
+    letter-spacing: -0.1em;
   }
 }
 
@@ -64,6 +65,7 @@
   @include vp-767 {
     font-size: 14px;
     line-height: 19px;
+    margin-top: 15px;
   }
 }
 
@@ -97,15 +99,16 @@
 
   @include vp-767 {
     width: 160px;
-    padding: 8px 15px 12px;
+    padding: 7px 15px 9px;
+    margin-top: 15px;
   }
 }
 
-.company__info--closed .company__button-collapse {
+.company__info--closed .company__button:last-child {
   display: none;
 }
 
-.company__info--closed .company__button-more {
+.company__info--closed .company__button:first-child {
   display: block;
 }
 
@@ -119,11 +122,11 @@
   }
 }
 
-.company__info--opened .company__button-collapse {
+.company__info--opened .company__button:last-child {
   display: block;
 }
 
-.company__info--opened .company__button-more {
+.company__info--opened .company__button:first-child {
   display: none;
 }
 

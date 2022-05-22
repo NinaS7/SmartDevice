@@ -7,6 +7,7 @@ export class Modals {
     this._focusLock = new FocusLock();
 
     this._modalOpenElements = document.querySelectorAll('[data-open-modal]');
+    this._modalFocusInput = document.querySelector('[data-focus-input]');
     this._openedModalElement = null;
     this._modalName = null;
     this._enableScrolling = true;
@@ -78,12 +79,12 @@ export class Modals {
     evt.preventDefault();
 
     this._modalName = target.closest('[data-open-modal]').dataset.openModal;
-
     if (!this._modalName) {
       return;
     }
 
     this.open();
+    this._modalFocusInput.focus();
   }
 
   _documentKeydownHandler(evt) {
