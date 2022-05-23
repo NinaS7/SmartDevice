@@ -81,8 +81,7 @@
   }
 }
 
-.promo a {
-  display: block;
+.promo__link {
   padding: 18px 10px;
   color: $color-tory-blue;
   font-weight: 700;
@@ -117,13 +116,15 @@
   }
 }
 
-.promo a:first-child {
+.promo__link--desktop {
+  display: block;
+
   @include vp-767 {
     display: none;
   }
 }
 
-.promo a:last-child {
+.promo__link--mobile {
   display: none;
 
   @include vp-767 {

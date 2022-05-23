@@ -105,11 +105,11 @@
   }
 }
 
-.company__info--closed .company__button:last-child {
+.company__info--closed .company__button-collapse {
   display: none;
 }
 
-.company__info--closed .company__button:first-child {
+.company__info--closed .company__button-more {
   display: block;
 }
 
@@ -123,11 +123,11 @@
   }
 }
 
-.company__info--opened .company__button:last-child {
+.company__info--opened .company__button-collapse {
   display: block;
 }
 
-.company__info--opened .company__button:first-child {
+.company__info--opened .company__button-more {
   display: none;
 }
 
