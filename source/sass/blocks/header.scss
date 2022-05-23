@@ -85,6 +85,7 @@
   color: $color-tory-blue;
   display: flex;
   margin-bottom: 10px;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -118,10 +119,11 @@
   text-align: center;
   text-transform: uppercase;
   color: $color-tory-blue;
-  padding: 10px 0 5px;
+  padding: 10px 0 11px;
   width: 160px;
+  height: fit-content;
   margin-top: 35px;
-  margin-bottom: 10px;
+  user-select: none;
 
   &:hover,
   &:focus {

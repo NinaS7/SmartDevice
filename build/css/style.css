@@ -676,6 +676,10 @@ button,
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__link:hover,
@@ -700,10 +704,16 @@ button,
   text-align: center;
   text-transform: uppercase;
   color: #f2f5f6;
-  padding: 10px 0 5px;
+  padding: 10px 0 11px;
   width: 160px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   margin-top: 35px;
-  margin-bottom: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .btn:hover,
@@ -716,6 +726,10 @@ button,
   display: block;
   width: 215px;
   height: 55px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .promo {
@@ -763,6 +777,10 @@ button,
   background-color: #00b2ff;
   border-radius: 3px;
   margin-left: 125px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .promo a:hover,
@@ -770,7 +788,7 @@ button,
   opacity: 0.7;
 }
 
-.promo a:first-child {
+.promo a:last-child {
   display: none;
 }
 
@@ -789,12 +807,12 @@ button,
 .advantages li {
   max-width: 595px;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   border: 1px solid #ebebeb;
   border-left: 5px solid #00b2ff;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 40px 41px 0;
+  padding: 40px 41px 5px;
 }
 
 .advantages li:hover,
@@ -892,6 +910,10 @@ button,
   padding: 13px;
   margin-top: 40px;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .company__info--closed .company__button:last-child {
@@ -960,20 +982,27 @@ button,
 .services li {
   position: relative;
   width: 100%;
-  height: 650px;
+  max-width: 350px;
+  max-height: 650px;
   margin: 0 auto;
   padding: 47px 40px;
+  padding-bottom: 172%;
   cursor: pointer;
-}
-
-.services li:hover h4,
-.services li:focus h4 {
-  color: #00b2ff;
 }
 
 .services a {
   max-width: 350px;
   width: 100%;
+}
+
+.services a:hover,
+.services a:focus {
+  opacity: 0.7;
+}
+
+.services a:hover h4,
+.services a:focus h4 {
+  color: #00b2ff;
 }
 
 .services img {
@@ -1023,10 +1052,9 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 45px;
+  gap: 120px;
   padding-top: 170px;
   padding-right: 10px;
-  margin: 0 auto;
 }
 
 .feedback__wrapper img {
@@ -1212,6 +1240,11 @@ button,
   padding: 16px 25px 11px;
   margin: 0;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
 }
 
 .feedback button:hover,
@@ -1297,6 +1330,10 @@ button,
 .footer__logo {
   margin-bottom: 30px;
   width: 215px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .footer__social {
@@ -1325,6 +1362,10 @@ button,
   width: 40px;
   height: 40px;
   margin: 7px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .social__link:hover path {
@@ -1377,6 +1418,10 @@ button,
   line-height: 22px;
   color: #ffffff;
   opacity: 0.7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav a:hover,
@@ -1438,8 +1483,8 @@ button,
 .contacts ul {
   list-style: none;
   margin: 4px 0 0;
-  padding: 0;
   width: 320px;
+  padding: 0;
 }
 
 .contacts li {
@@ -1467,6 +1512,10 @@ button,
   letter-spacing: -0.03em;
   color: #ffffff;
   opacity: 0.7;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contacts a:hover,
@@ -1477,7 +1526,7 @@ button,
 .modal {
   position: fixed;
   top: 0;
-  right: 0;
+  right: 17px;
   bottom: 0;
   left: 0;
   z-index: 100;
@@ -1541,6 +1590,8 @@ button,
   position: relative;
   width: 500px;
   padding: 40px;
+  padding-top: 38px;
+  padding-bottom: 42px;
   background-color: #00b2ff;
   border-radius: 3px;
 }
@@ -1590,17 +1641,18 @@ button,
 .modal h3 {
   font-size: 30px;
   line-height: 42px;
+  letter-spacing: -0.08em;
   color: #ffffff;
   margin: 0;
-  margin-bottom: 15px;
 }
 
 .modal p {
   color: #ffffff;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 25px;
   font-family: "PT Mono", "Courier New", monospaced;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-bottom: 33px;
 }
 
 .modal input {
@@ -1663,10 +1715,10 @@ button,
   line-height: 22px;
   color: #ffffff;
   width: 100%;
-  padding-top: 25px;
+  padding-top: 22px;
   padding-left: 15px;
   min-height: 155px;
-  margin-bottom: 25px;
+  margin-bottom: 17px;
 }
 
 .modal textarea:hover,
@@ -1733,13 +1785,13 @@ button,
   font-size: 16px;
   line-height: 19px;
   text-align: center;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   background-color: #03101b;
   border-radius: 3px;
   border: none;
   color: #ffffff;
-  padding: 15px 25px;
+  padding: 15px 25px 12px;
   margin: 0;
   margin-bottom: 20px;
   cursor: pointer;
@@ -1763,7 +1815,7 @@ button,
   position: relative;
   display: block;
   cursor: pointer;
-  padding-left: 26px;
+  padding-left: 34px;
 }
 
 .modal__checkbox-input:hover + label,
@@ -1791,8 +1843,8 @@ button,
   position: absolute;
   width: 15px;
   height: 15px;
-  top: 0;
-  left: 0;
+  top: -3px;
+  left: 9px;
   background-image: url("../img/svg/checkbox-on.svg");
   background-repeat: no-repeat;
   cursor: pointer;
@@ -1811,7 +1863,11 @@ button,
 
 @media (max-width: 1919px) {
   .container {
-    padding: 0 18%;
+    padding: 0 15%;
+  }
+
+  .container__feedback {
+    padding: 0 5%;
   }
 
   .header__wrapper {
@@ -1820,7 +1876,7 @@ button,
   }
 
   .footer__wrapper {
-    padding: 0 18%;
+    padding: 0 15%;
   }
 }
 
@@ -1853,7 +1909,7 @@ button,
   .footer__wrapper {
     -ms-grid-columns: 215px 1fr 215px;
     grid-template-columns: 215px 1fr 215px;
-    padding: 0 12%;
+    padding: 0 7%;
   }
 
   .contacts ul {
@@ -1941,8 +1997,8 @@ button,
 
   .advantages li {
     min-width: 320px;
-    height: 360px;
-    max-width: none;
+    min-height: 360px;
+    max-width: 100%;
   }
 
   .advantages__image {
@@ -1950,7 +2006,19 @@ button,
   }
 
   .advantages h4 {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
+  }
+
+  .advantages li.advantages__detective .advantages__image {
+    margin-bottom: 7px;
+  }
+
+  .advantages li.advantages__tag .advantages__image {
+    margin-bottom: 4px;
+  }
+
+  .advantages li.advantages__tag h4 {
+    margin-bottom: 3px;
   }
 
   .company {
@@ -1996,8 +2064,12 @@ button,
   }
 
   .services li {
-    height: 250px;
+    min-height: 250px;
+    max-height: none;
     padding: 37px 45px;
+    padding-bottom: 31%;
+    min-width: 670px;
+    max-width: none;
   }
 
   .services a {
@@ -2010,9 +2082,9 @@ button,
   }
 
   .services__link {
-    width: 58px;
+    width: 59px;
     height: 60px;
-    background-position: 30px;
+    background-position: 27px;
   }
 
   .feedback {
@@ -2025,10 +2097,15 @@ button,
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 0;
+    margin: 0 auto;
   }
 
   .feedback__wrapper img {
     display: none;
+  }
+
+  .feedback__info {
+    margin: 0 auto;
   }
 
   .feedback__info h3 {
@@ -2112,11 +2189,11 @@ button,
 
   .footer__nav {
     padding: 0;
+    margin-right: 148px;
   }
 
   .footer__contacts {
     padding: 0;
-    padding-left: 148px;
   }
 
   .social {
@@ -2212,11 +2289,11 @@ button,
   }
 
   .promo a:first-child {
-    display: block;
+    display: none;
   }
 
   .promo a:last-child {
-    display: none;
+    display: block;
   }
 
   .advantages ul {
@@ -2227,7 +2304,7 @@ button,
 
   .advantages li {
     min-width: 100%;
-    height: 340px;
+    min-height: 340px;
     padding: 30px 25px 35px;
   }
 
@@ -2254,12 +2331,12 @@ button,
     line-height: 19px;
   }
 
-  .advantages__detective .advantages__image {
-    margin-bottom: 18px;
+  .advantages li.advantages__detective {
+    min-height: 325px;
   }
 
-  .advantages li.advantages__detective {
-    height: 325px;
+  .advantages li.advantages__detective .advantages__image {
+    margin-bottom: 18px;
   }
 
   .advantages li.advantages__detective h4 {
@@ -2267,7 +2344,7 @@ button,
   }
 
   .advantages li.advantages__tag {
-    height: 325px;
+    min-height: 325px;
   }
 
   .advantages li.advantages__tag .advantages__image {
@@ -2337,6 +2414,7 @@ button,
   .services li {
     padding: 30px;
     padding-top: 26px;
+    min-width: 270px;
   }
 
   .services a {
@@ -2442,15 +2520,25 @@ button,
 
   .footer__nav {
     width: 100%;
-    padding: 21px 25px;
+    margin: 0;
     border-top: 1px solid rgba(248, 253, 255, 0.7);
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
   .footer__contacts {
     width: 100%;
-    padding: 23px 25px 13px;
     margin-bottom: 35px;
+    padding: 0;
+  }
+
+  .nav__info {
+    padding: 21px 25px;
+    cursor: pointer;
+  }
+
+  .nav__lists {
+    padding: 0 25px 10px;
+    margin-top: 0;
   }
 
   .nav a {
@@ -2476,13 +2564,19 @@ button,
     border-bottom: 1px solid rgba(248, 253, 255, 0.7);
   }
 
+  .contacts__info {
+    padding: 23px 25px 13px;
+    cursor: pointer;
+  }
+
   .contacts h3 {
     margin: 0;
   }
 
   .contacts ul {
     width: 100%;
-    margin-top: 18px;
+    margin: 18px 0 20px;
+    padding: 0 25px;
   }
 
   .contacts p {
@@ -2500,16 +2594,14 @@ button,
     width: 160px;
     padding-left: -2px;
   }
+
+  .modal {
+    display: none;
+  }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .promo {
     background-image: url("../img/back-promo-mobile@2x.jpg");
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .promo {
-    background-image: url("../img/back-promo-desktop@2x.jpg");
   }
 }

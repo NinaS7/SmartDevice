@@ -84,7 +84,6 @@ export class Modals {
     }
 
     this.open();
-    this._modalFocusInput.focus();
   }
 
   _documentKeydownHandler(evt) {

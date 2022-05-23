@@ -92,6 +92,7 @@
   padding: 13px;
   margin-top: 40px;
   cursor: pointer;
+  user-select: none;
 
   @include vp-1023 {
     margin-top: 19px;

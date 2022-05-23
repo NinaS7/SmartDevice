@@ -20,11 +20,11 @@
 .advantages li {
   max-width: 595px;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   border: 1px solid #ebebeb;
   border-left: 5px solid $color-deep-sky-blue;
   box-sizing: border-box;
-  padding: 40px 41px 0;
+  padding: 40px 41px 5px;
 
   &:hover,
   &:focus {
@@ -45,13 +45,13 @@
 
   @include vp-1023 {
     min-width: 320px;
-    height: 360px;
-    max-width: none;
+    min-height: 360px;
+    max-width: 100%;
   }
 
   @include vp-767 {
     min-width: 100%;
-    height: 340px;
+    min-height: 340px;
     padding: 30px 25px 35px;
   }
 }
@@ -85,7 +85,7 @@
   color: $color-deep-sky-blue;
 
   @include vp-1023 {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
   }
 
   @include vp-767 {
@@ -110,15 +110,19 @@
   }
 }
 
-.advantages__detective .advantages__image {
-  @include vp-767 {
-    margin-bottom: 18px;
-  }
-}
-
 .advantages li.advantages__detective {
+  @include vp-1023 {
+    .advantages__image {
+      margin-bottom: 7px;
+    }
+  }
+
   @include vp-767 {
-    height: 325px;
+    min-height: 325px;
+
+    .advantages__image {
+      margin-bottom: 18px;
+    }
 
     h4 {
       margin-bottom: 13px;
@@ -127,8 +131,18 @@
 }
 
 .advantages li.advantages__tag {
+  @include vp-1023 {
+    .advantages__image {
+      margin-bottom: 4px;
+    }
+
+    h4 {
+      margin-bottom: 3px;
+    }
+  }
+
   @include vp-767 {
-    height: 325px;
+    min-height: 325px;
 
     .advantages__image {
       margin-bottom: 18px;

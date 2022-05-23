@@ -37,20 +37,20 @@
               </picture>
             </a>
             <div class="header__links">
-              <a class="header__link" href="malti:info@sd.ru" aria-label="Напишите нам">
+              <a class="header__link" href="malti:info@sd.ru" tabindex="1" aria-label="Напишите нам">
                 <svg class="header__image" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#icon-email"></use>
                 </svg>
                 <span>info@sd.ru</span>
               </a>
-              <a class="header__link" href="tel+74950005252" aria-label="Позвоните нам">
+              <a class="header__link" href="tel+74950005252" tabindex="2" aria-label="Позвоните нам">
                 <svg class="header__image" width="21" height="20" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
                 <span>+7 (495) 000 52 52</span>
               </a>
             </div>
-            <a class="btn" href="#" data-open-modal="feedback">Заказать звонок</a>
+            <a class="btn" href="#" tabindex="3" data-open-modal="feedback">Заказать звонок</a>
           </div>
         </div>
       </header>
@@ -62,7 +62,7 @@
           <div class="container">
             <h2>Печатные платы</h2>
             <p>производство и монтаж, поставка комплектующих, <br>блоков и модулей</p>
-            <a class="scroll-to" href="#feedback" aria-label="Получить консультацию">
+            <a class="scroll-to" href="#feedback" tabindex="4" aria-label="Получить консультацию">
               <span>Получить бесплатную консультацию</span>
               <span>Бесплатная консультация</span>
             </a>
@@ -132,7 +132,7 @@
                     <p>Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов</p>
                   </div>
                 </div>
-                <button class="company__button" type="button" aria-label="Узнать подробнее">
+                <button class="company__button" type="button" tabindex="5" aria-label="Узнать подробнее">
                   <span>Подробнее</span>
                   <span>Свернуть</span>
                 </button>
@@ -149,7 +149,7 @@
             </h3>
             <ul>
               <li>
-                <a href="#" aria-label="Переход на страницу о производстве">
+                <a href="#" tabindex="6" aria-label="Переход на страницу о производстве">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/back-card1-mobile.webp 1x, img/back-card1-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/back-card1-tablet.webp 1x, img/back-card1-tablet@2x.webp 2x">
@@ -166,7 +166,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Переход на страницу о монтаже">
+                <a href="#" tabindex="7" aria-label="Переход на страницу о монтаже">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/back-card2-mobile.webp 1x, img/back-card2-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/back-card2-tablet.webp 1x, img/back-card2-tablet@2x.webp 2x">
@@ -183,7 +183,7 @@
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Переход на страницу о комплектующих">
+                <a href="#" tabindex="8" aria-label="Переход на страницу о комплектующих">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/back-card3-mobile.webp 1x, img/back-card3-mobile@2x.webp 2x">
                     <source type="image/webp" media="(max-width: 1023px)" srcset="img/back-card3-tablet.webp 1x, img/back-card3-tablet@2x.webp 2x">
@@ -204,7 +204,7 @@
         </section>
 
         <section class="feedback" id="feedback">
-          <div class="container">
+          <div class="container container__feedback">
             <div class="feedback__wrapper">
               <picture>
                 <source type="image/webp" srcset="img/paper-airplane.webp 1x, img/paper-airplane@2x.webp 2x">
@@ -345,18 +345,18 @@
           <div class="modal__overlay" data-close-modal></div>
           <div class="modal__content">
             <h3>Закажите звонок</h3>
-            <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем вас бесплатно в&nbsp;удобное время</p>
+            <p class="modal__description">Оставьте контакты, мы&nbsp;проконсультируем <br>вас бесплатно в&nbsp;удобное время</p>
             <form action="https://echo.htmlacademy.ru" method="post">
               <label>
                 <input type="text" name="name" data-focus-input placeholder="Имя" required>
               </label>
               <label>
-                <input type="tel" name="phone" placeholder="Телефон" data-tel-input maxlength="16" required>
+                <input type="tel" name="phone" placeholder="Телефон" id="field-tel-modal" maxlength="16" required>
               </label>
               <label>
                 <textarea name="question" placeholder="Ваш вопрос"></textarea>
               </label>
-              <button class="modal__button" type="submit" aria-label="Отправить вопрос">Задать вопрос</button>
+              <button class="modal__button" type="submit" aria-label="Отправить вопрос">Отправить</button>
               <div class="modal__checkbox">
                 <input class="visually-hidden modal__checkbox-input" id="click" type="checkbox" name="info" checked required>
                 <label for="click">Я согласен на обработку персональных данных</label>

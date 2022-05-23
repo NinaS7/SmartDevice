@@ -5,7 +5,7 @@
   padding: 0 350px;
 
   @media (max-width: 1919px) {
-    padding: 0 18%;
+    padding: 0 15%;
   }
 
   // @include vp-1439 {
@@ -18,5 +18,11 @@
 
   @include vp-767 {
     padding: 0 25px;
+  }
+}
+
+.container__feedback {
+  @media (max-width: 1919px) {
+    padding: 0 5%;
   }
 }

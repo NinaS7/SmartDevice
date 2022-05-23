@@ -65,32 +65,40 @@
 .services li {
   position: relative;
   width: 100%;
-  height: 650px;
+  max-width: 350px;
+  max-height: 650px;
   margin: 0 auto;
   padding: 47px 40px;
+  padding-bottom: 172%;
   cursor: pointer;
 
-  &:hover,
-  &:focus {
-    h4 {
-      color: $color-deep-sky-blue;
-    }
-  }
-
   @include vp-1023 {
-    height: 250px;
+    min-height: 250px;
+    max-height: none;
     padding: 37px 45px;
+    padding-bottom: 31%;
+    min-width: 670px;
+    max-width: none;
   }
 
   @include vp-767 {
     padding: 30px;
     padding-top: 26px;
+    min-width: 270px;
   }
 }
 
 .services a {
   max-width: 350px;
   width: 100%;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+    h4 {
+      color: $color-deep-sky-blue;
+    }
+  }
 
   @include vp-1023 {
     min-width: 670px;
@@ -145,9 +153,9 @@
   bottom: 0;
 
   @include vp-1023 {
-    width: 58px;
+    width: 59px;
     height: 60px;
-    background-position: 30px;
+    background-position: 27px;
   }
 
   @include vp-767 {
