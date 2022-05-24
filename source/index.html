@@ -78,7 +78,7 @@
                   </svg>
                 </div>
                 <h4>Оперативные сроки </h4>
-                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и комплектующих в&nbsp;самые короткие сроки</p>
+                <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и&nbsp;доставлять заказы плат и&nbsp;комплектующих в&nbsp;самые короткие сроки</p>
               </li>
               <li>
                 <div class="advantages__image">
@@ -96,7 +96,7 @@
                   </svg>
                 </div>
                 <h4>Полная конфиденциальность</h4>
-                <p>По&nbsp;желанию клиента мы обеспечиваем полную конфеденциальность.</p>
+                <p>По&nbsp;желанию клиента мы&nbsp;обеспечиваем полную конфеденциальность.</p>
               </li>
               <li class="advantages__tag">
                 <div class="advantages__image">
@@ -141,10 +141,8 @@
 
         <section class="services">
           <div class="container">
-            <h3>
-              <span class="services__title-desktop">Smart Device предлагает следующие товары и услуги</span>
-              <span class="services__title-mobile">Товары и услуги<br>Smart Device</span>
-            </h3>
+            <h3 class="services__title services__title-desktop">Smart Device предлагает следующие товары и услуги</h3>
+            <h3 class="services__title services__title-mobile">Товары и услуги<br>Smart Device</h3>
             <ul>
               <li>
                 <a href="#" tabindex="6" aria-label="Переход на страницу о производстве">
@@ -218,18 +216,18 @@
                       <input type="text" name="name" placeholder="Имя" required>
                     </label>
                     <label>
-                      <input type="tel" name="phone" id="field-tel" maxlength="16" placeholder="Телефон" required>
+                      <input type="tel" name="phone" id="field-tel" minlength="10"  maxlength="16" placeholder="Телефон" required>
                     </label>
                   </div>
                   <label>
                     <textarea name="question" placeholder="Ваш вопрос"></textarea>
                   </label>
                   <div class="feedback__choice">
-                    <button type="submit" aria-label="Отправить вопрос">Задать вопрос</button>
                     <div class="feedback__checkbox">
                       <input class="visually-hidden feedback__checkbox-input" id="tick" type="checkbox" name="info" checked required>
                       <label for="tick">Я согласен на обработку <br>персональных данных</label>
                     </div>
+                    <button type="submit" aria-label="Отправить вопрос">Задать вопрос</button>
                   </div>
                 </form>
               </div>
