@@ -16,10 +16,13 @@
   user-select: none;
 
   @include vp-1023 {
-    width: 30px;
-    height: 30px;
-    margin: 10px 0 15px 24px;
+    margin: 5px 0 10px 15px;
   }
+}
+
+.social__link {
+  height: 40px;
+  width: 40px;
 }
 
 .social__link:hover path {

@@ -34,7 +34,7 @@
   }
 
   @include vp-1023 {
-    padding: 0 48px 0 50px;
+    padding: 0 43px 0 50px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -79,8 +79,8 @@
 }
 
 .footer__social {
-  padding: 0 9px;
-  margin-top: 27px;
+  padding: 0 3px;
+  margin-top: 23px;
 
   @include vp-1023 {
     padding: 0;
@@ -88,7 +88,7 @@
   }
 
   @include vp-767 {
-    margin-left: 44px;
+    margin-left: 47px;
   }
 }
 
