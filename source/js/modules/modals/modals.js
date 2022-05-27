@@ -7,7 +7,6 @@ export class Modals {
     this._focusLock = new FocusLock();
 
     this._modalOpenElements = document.querySelectorAll('[data-open-modal]');
-    this._modalFocusInput = document.querySelector('[data-focus-input]');
     this._openedModalElement = null;
     this._modalName = null;
     this._enableScrolling = true;

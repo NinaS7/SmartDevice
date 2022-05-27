@@ -1,9 +1,21 @@
 .feedback {
   background-color: $color-deep-sky-blue;
-  background-image: url("../img/svg/back-feedback.svg");
+  // background-image: url("../img/svg/back-feedback.svg");
   background-position: 0 77%;
   background-size: cover;
   min-height: 840px;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 972px;
+    height: 920px;
+    top: -76px;
+    left: -2px;
+    background-image: url("../img/svg/back-feedback.svg");
+    transform: rotate(-0.1deg);
+  }
 
   @include vp-1023 {
     min-height: 580px;
@@ -15,12 +27,32 @@
   }
 }
 
+.feedback__container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 350px;
+
+  @media (max-width: 1919px) {
+    padding: 0 5%;
+  }
+
+  @include vp-1023 {
+    padding: 0 50px;
+  }
+
+  @include vp-767 {
+    padding: 0 25px;
+  }
+}
+
 .feedback__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 115px;
   padding-top: 170px;
   padding-right: 15px;
+  position: absolute;
 
   @include vp-1023 {
     padding: 50px 0 0;
@@ -119,9 +151,13 @@
   }
 }
 
+.feedback label {
+  width: 100%;
+}
+
 .feedback input {
   max-width: 275px;
-  width: 100%;
+  width: inherit;
   padding: 13px 15px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;

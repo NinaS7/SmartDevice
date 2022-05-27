@@ -1057,7 +1057,7 @@ button,
   color: #ffffff;
   margin: 0;
   position: absolute;
-  width: 172px;
+  width: 160px;
 }
 
 .services__link {
@@ -1076,10 +1076,30 @@ button,
 
 .feedback {
   background-color: #00b2ff;
-  background-image: url("../img/svg/back-feedback.svg");
   background-position: 0 77%;
   background-size: cover;
   min-height: 840px;
+  position: relative;
+}
+
+.feedback::before {
+  content: '';
+  position: absolute;
+  width: 972px;
+  height: 920px;
+  top: -76px;
+  left: -2px;
+  background-image: url("../img/svg/back-feedback.svg");
+  -webkit-transform: rotate(-0.1deg);
+  -ms-transform: rotate(-0.1deg);
+  transform: rotate(-0.1deg);
+}
+
+.feedback__container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 350px;
 }
 
 .feedback__wrapper {
@@ -1090,6 +1110,7 @@ button,
   gap: 115px;
   padding-top: 170px;
   padding-right: 15px;
+  position: absolute;
 }
 
 .feedback__wrapper img {
@@ -1137,9 +1158,13 @@ button,
   gap: 30px;
 }
 
+.feedback label {
+  width: 100%;
+}
+
 .feedback input {
   max-width: 275px;
-  width: 100%;
+  width: inherit;
   padding: 13px 15px 15px;
   background-color: rgba(4, 20, 39, 0.15);
   border-radius: 3px;
@@ -1691,7 +1716,8 @@ button,
 .modal h3 {
   font-size: 30px;
   line-height: 42px;
-  letter-spacing: -0.08em;
+  font-weight: 400;
+  letter-spacing: -0.05em;
   color: #ffffff;
   margin: 0;
 }
@@ -1828,6 +1854,11 @@ button,
   color: #ffffff;
 }
 
+.modal__choice {
+  display: -ms-grid;
+  display: grid;
+}
+
 .modal__button {
   display: block;
   width: 100%;
@@ -1859,6 +1890,9 @@ button,
   color: #ffffff;
   opacity: 0.8;
   font-family: "PT Mono", "Courier New", monospaced;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .modal__checkbox label {
@@ -1916,10 +1950,6 @@ button,
     padding: 0 15%;
   }
 
-  .container__feedback {
-    padding: 0 5%;
-  }
-
   .header__container {
     padding: 0 15%;
   }
@@ -1927,6 +1957,10 @@ button,
   .header__wrapper {
     gap: 10%;
     padding-right: 0;
+  }
+
+  .feedback__container {
+    padding: 0 5%;
   }
 
   .footer__wrapper {
@@ -1946,6 +1980,12 @@ button,
 
   .contacts p br {
     display: block;
+  }
+}
+
+@media (max-width: 1800px) {
+  .services ul {
+    gap: 4%;
   }
 }
 
@@ -1969,7 +2009,7 @@ button,
 
 @media (max-width: 1135px) {
   .header__wrapper {
-    gap: 5%;
+    gap: 4%;
   }
 }
 
@@ -2142,6 +2182,10 @@ button,
   .feedback {
     min-height: 580px;
     background-image: none;
+  }
+
+  .feedback__container {
+    padding: 0 50px;
   }
 
   .feedback__wrapper {
@@ -2507,6 +2551,10 @@ button,
 
   .feedback {
     min-height: 750px;
+  }
+
+  .feedback__container {
+    padding: 0 25px;
   }
 
   .feedback__wrapper {

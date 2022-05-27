@@ -114,7 +114,8 @@
 .modal h3 {
   font-size: 30px;
   line-height: 42px;
-  letter-spacing: -0.08em;
+  font-weight: 400;
+  letter-spacing: -0.05em;
   color: $color-default-white;
   margin: 0;
 }
@@ -188,6 +189,10 @@
   color: $color-default-white;
 }
 
+.modal__choice {
+  display: grid;
+}
+
 .modal__button {
   display: block;
   width: 100%;
@@ -219,6 +224,7 @@
   color: $color-default-white;
   opacity: 0.8;
   font-family: $ff-mono;
+  order: 2;
 }
 
 .modal__checkbox label {

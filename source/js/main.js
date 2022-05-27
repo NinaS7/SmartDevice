@@ -3,8 +3,11 @@ import {initModals} from './modules/modals/init-modals';
 import {getAccordion} from './accordion';
 import {onClick} from './company';
 import './mask';
+import {getMask} from './mask';
 
 const anchors = document.querySelectorAll('.scroll-to');
+const popup = document.getElementById('popup');
+const btnModal = document.querySelector('.btn');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -14,6 +17,15 @@ window.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
   initModals();
+
+  btnModal.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    if (popup.classList.contains('is-active')) {
+      document.getElementById('name-focus').focus();
+    }
+  });
+
+  getMask();
 
   const getscroll = () => {
     const scrollY = document.body.style.top;
