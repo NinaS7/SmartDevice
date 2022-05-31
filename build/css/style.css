@@ -1600,15 +1600,15 @@ button,
 
 .modal {
   position: fixed;
-  top: 136px;
-  left: 50%;
+  top: 146px;
+  left: 49.6%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-  width: 490px;
+  width: 500px;
   min-height: 610px;
   margin: 0 auto;
-  padding: 30px 25px 38px 40px;
+  padding: 37px 40px 38px 40px;
   z-index: 1000;
   background-color: #00b2ff;
   border-radius: 3px;
@@ -1632,15 +1632,16 @@ button,
   letter-spacing: -0.05em;
   color: #ffffff;
   margin: 0;
+  margin-bottom: 3px;
 }
 
 .modal p {
   color: #ffffff;
   font-size: 16px;
-  line-height: 25px;
+  line-height: 23px;
   font-family: "PT Mono", "Courier New", monospaced;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 }
 
 .modal input {
