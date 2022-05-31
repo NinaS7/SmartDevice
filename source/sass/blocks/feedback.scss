@@ -1,6 +1,5 @@
 .feedback {
   background-color: $color-deep-sky-blue;
-  // background-image: url("../img/svg/back-feedback.svg");
   background-position: 0 77%;
   background-size: cover;
   min-height: 840px;
@@ -15,11 +14,16 @@
     left: -2px;
     background-image: url("../img/svg/back-feedback.svg");
     transform: rotate(-0.1deg);
+
+    @include vp-1023 {
+      display: none;
+    }
   }
 
   @include vp-1023 {
     min-height: 580px;
     background-image: none;
+    position: static;
   }
 
   @include vp-767 {
@@ -49,7 +53,7 @@
 .feedback__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 115px;
+  gap: 44px;
   padding-top: 170px;
   padding-right: 15px;
   position: absolute;
@@ -59,6 +63,7 @@
     grid-template-columns: 1fr;
     gap: 0;
     margin: 0 auto;
+    position: static;
   }
 
   @include vp-767 {

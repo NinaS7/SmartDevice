@@ -682,7 +682,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 10px 10px;
+  margin: 0 0 10px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -1107,7 +1107,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 115px;
+  gap: 44px;
   padding-top: 170px;
   padding-right: 15px;
   position: absolute;
@@ -1612,7 +1612,6 @@ button,
   z-index: 1000;
   background-color: #00b2ff;
   border-radius: 3px;
-  overflow: auto;
 }
 
 .modal--active {
@@ -2119,9 +2118,14 @@ button,
     background-position: 27px;
   }
 
+  .feedback::before {
+    display: none;
+  }
+
   .feedback {
     min-height: 580px;
     background-image: none;
+    position: static;
   }
 
   .feedback__container {
@@ -2134,6 +2138,7 @@ button,
     grid-template-columns: 1fr;
     gap: 0;
     margin: 0 auto;
+    position: static;
   }
 
   .feedback__wrapper img {
@@ -2294,6 +2299,8 @@ button,
 
   .header__links {
     margin-top: 10px;
+    width: 100px;
+    margin-right: 10px;
   }
 
   .header__image {
