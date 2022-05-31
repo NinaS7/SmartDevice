@@ -80,7 +80,7 @@ const onModal = () => {
     footer.removeAttribute('aria-hidden');
     document.removeEventListener('keydown', onPopupEscPress);
     getscroll();
-    openPopup.focus();
+    headerBtn.focus();
   };
 
   closeBtn.addEventListener('click', closePopup);
