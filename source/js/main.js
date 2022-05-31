@@ -1,38 +1,25 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {initModals} from './modules/modals/init-modals';
 import {getAccordion} from './accordion';
 import {onClick} from './company';
 import './mask';
 import {getMask} from './mask';
+import './popup';
+import {getscroll, onModal} from './popup';
 
 const anchors = document.querySelectorAll('.scroll-to');
-const popup = document.getElementById('popup');
-const btnModal = document.querySelector('.btn');
+
 
 window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
-
+  // initModals();
 });
 
 window.addEventListener('load', () => {
-  initModals();
 
-  btnModal.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    if (popup.classList.contains('is-active')) {
-      document.getElementById('name-focus').focus();
-    }
-  });
-
+  onModal();
   getMask();
-
-  const getscroll = () => {
-    const scrollY = document.body.style.top;
-    document.body.style.position = '';
-    document.body.style.top = '';
-    window.scrollTo(0, parseFloat(scrollY || '0') * -1);
-  };
 
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (evt) {

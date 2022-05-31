@@ -27,15 +27,15 @@ const settings = {
 };
 
 const initModals = () => {
-  const modalElement = document.querySelector('.modal');
-  setTimeout(() => {
-    modalElement.classList.remove('modal--preload');
-  }, 100);
+  const modalElements = document.querySelectorAll('.modal');
+  modalElements.forEach((el) => {
+    setTimeout(() => {
+      el.classList.remove('modal--preload');
+    }, 100);
+  });
   modals = new Modals(settings);
-
   // Используйте в разработке экспортируемую переменную modals, window сделан для бэкэнда
   // window.modals = modals;
 };
 
 export {modals, initModals};
-
